@@ -1,3 +1,5 @@
+# server/models.py
+
 from flask_sqlalchemy import SQLAlchemy
 
 db = SQLAlchemy()
@@ -12,4 +14,4 @@ class Newsletter(db.Model):
     edited_at = db.Column(db.DateTime, onupdate=db.func.now())
 
     def __repr__(self):
-        return f'<Newsletter {self.title}, published at {self.published_at}.>'
+        return f'<Newsletter {self.title}, published at {self.published_at}>'
